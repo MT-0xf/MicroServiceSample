@@ -1,0 +1,53 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.0.6'
+	id 'io.spring.dependency-management' version '1.1.0'
+	id 'maven-publish'
+	id "io.github.lognet.grpc-spring-boot" version '4.6.0'
+}
+
+jar {
+	enabled = true
+	archiveClassifier = ''
+}
+bootJar {
+	enabled = false
+}
+
+publishing {
+	publications {
+		mavenPlugin(MavenPublication) {
+			from components.java
+		}
+	}
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-graphql'
+	implementation 'javax.annotation:javax.annotation-api:1.3.2'
+	implementation 'org.projectlombok:lombok:1.18.26'
+	implementation 'org.projectlombok:lombok:1.18.26'
+	implementation 'org.projectlombok:lombok:1.18.26'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework:spring-webflux'
+	testImplementation 'org.springframework.graphql:spring-graphql-test'
+	implementation 'com.graphql-java:graphql-java-extended-scalars:20.0'
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.3'
+	implementation 'com.google.protobuf:protobuf-java-util:3.21.12'
+	implementation 'com.fasterxml.jackson.core:jackson-core:2.13.4'
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.4'
+	implementation 'com.fasterxml.jackson.core:jackson-annotations:2.13.4'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

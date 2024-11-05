@@ -1,0 +1,12 @@
+version: '3'
+services:
+  nuxt:
+    container_name: vue-app
+    build: ./frontend
+    ports:
+      - "3000:3000"
+      - "24678:24678"
+      - "5173:5173"
+    volumes:
+      - "./frontend:/projects"
+    tty: true

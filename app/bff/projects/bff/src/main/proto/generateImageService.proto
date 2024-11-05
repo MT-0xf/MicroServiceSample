@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package generateImageService;
+
+// 画像生成サービス
+service GenerateImageService {
+  // 画像生成
+  rpc generateImage (EmptyRequest) returns (ImageFile);
+}
+
+// 引数なし
+message EmptyRequest { }
+
+// 画像ファイル
+message ImageFile {
+  string Content = 1;
+  string ContentType = 2;
+}

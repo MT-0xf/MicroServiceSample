@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "dotnet-app": {
+      "commandName": "Project",
+      "applicationUrl": "http://localhost:5240",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": true
+    }
+  }
+}

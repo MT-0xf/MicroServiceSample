@@ -1,0 +1,8 @@
+flask
+flask-cors
+uwsgi
+psycopg2
+black
+flake8
+grpcio
+grpcio-tools

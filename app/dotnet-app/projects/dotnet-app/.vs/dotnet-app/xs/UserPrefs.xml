@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{CD2F79D2-B01C-4651-AC16-0EBB90731692}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.dotnet-app PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Services/GreeterService.cs">
+    <Files>
+      <File FileName="Services/GreeterService.cs" Line="18" Column="46" />
+      <File FileName="Protos/greet.proto" Line="10" Column="29" />
+      <File FileName="Properties/launchSettings.json" Line="5" Column="47" />
+      <File FileName="Program.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="dotnet-app" expanded="True">
+            <Node name="dotnet-app" expanded="True">
+              <Node name="Properties" expanded="True" />
+              <Node name="Protos" expanded="True" />
+              <Node name="Services" expanded="True">
+                <Node name="GreeterService.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

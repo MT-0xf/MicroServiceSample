@@ -1,0 +1,44 @@
+# クエリ
+type Query {
+    # ログイン
+    login(name: String!, password: String!): LoginReply
+
+    # 画像一覧取得
+    getPostImageList: [PostImageFile]
+
+    # 画像生成ファイル取得
+    generateImage: ImageFile
+}
+
+# ミューテーション
+type Mutation {
+    # 画像アップロード
+    postImage(title: String, imageFile: String): PostImageReply
+}
+
+# ログインレスポンス
+type LoginReply {
+    Message: String!
+}
+
+# アップロード画像
+type PostImageFile {
+    Content: String
+    ContentType: String
+}
+
+# 画像アップロードレスポンス
+type PostImageReply {
+    Message: String
+}
+
+# 画像一覧取得レスポンス
+type GetPostImageListReply {
+    PostImageList: [PostImageFile]
+}
+
+# 画像生成ファイル
+type ImageFile {
+    Content: String
+    ContentType: String
+}

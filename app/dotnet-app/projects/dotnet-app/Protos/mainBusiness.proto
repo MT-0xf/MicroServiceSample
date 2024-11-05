@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+package mainBusiness;
+
+option csharp_namespace = "dotnet_app";
+
+// Greeting Service
+service MainBusiness {
+    // ログイン
+    rpc login (LoginRequest) returns (LoginReply);
+
+    // 画像登録
+    rpc PostImage (PostImageRequest) returns (PostImageReply);
+
+    // 画像一覧取得
+    rpc getPostImageList (EmptyRequest) returns (stream GetPostImageListReply);
+}
+
+// ユーザ情報を含むリクエスト
+message LoginRequest {
+    string Name = 1;
+    string Password = 2;
+}
+
+// ログイン結果を含むレスポンス
+message LoginReply {
+    string Message = 1;
+}
+
+// 画像ファイルを含むリクエスト
+message PostImageRequest {
+    string Title = 1;
+    string ImageFile = 2;
+}
+
+// 画像登録結果を含むレスポンス
+message PostImageReply {
+    string Message = 1;
+}
+
+// 引数なし
+message EmptyRequest { }
+
+// 画像ファイル
+message PostImageFile {
+    string Content = 1;
+    string ContentType = 2;
+}
+
+// 画像ファイル一覧を含むレスポンス
+message GetPostImageListReply {
+    PostImageFile PostImageList = 1;
+}

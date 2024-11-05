@@ -1,0 +1,12 @@
+version: '3'
+services:
+  flask:
+    container_name: flask-app
+    build: ./flask
+    command: uwsgi app.ini
+    volumes:
+      - ./flask/src:/projects
+    tty: true
+    ports:
+      - 5000:5000
+      - 50051:50051
